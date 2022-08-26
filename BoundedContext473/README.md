@@ -1,4 +1,4 @@
-# BoundedContext339
+# BoundedContext473
 
 ## Running in local development environment
 
@@ -10,8 +10,8 @@ mvn spring-boot:run
 
 ```
 mvn package -B -DskipTests
-docker build -t username/BoundedContext339:v1 .
-docker run username/BoundedContext339:v1
+docker build -t username/BoundedContext473:v1 .
+docker run username/BoundedContext473:v1
 ```
 
 ## Push images and running in Kubernetes
@@ -20,15 +20,15 @@ docker run username/BoundedContext339:v1
 docker login 
 # in case of docker hub, enter your username and password
 
-docker push username/BoundedContext339:v1
+docker push username/BoundedContext473:v1
 ```
 
 Edit the deployment.yaml under the /kubernetes directory:
 ```
     spec:
       containers:
-        - name: BoundedContext339
-          image: username/BoundedContext339:latest   # change this image name
+        - name: BoundedContext473
+          image: username/BoundedContext473:latest   # change this image name
           ports:
             - containerPort: 8080
 
@@ -41,13 +41,13 @@ kubectl apply -f kubernetes/deployment.yaml
 
 See the pod status:
 ```
-kubectl get pods -l app=BoundedContext339
+kubectl get pods -l app=BoundedContext473
 ```
 
 If you have no problem, you can connect to the service by opening a proxy between your local and the kubernetes by using this command:
 ```
 # new terminal
-kubectl port-forward deploy/BoundedContext339 8080:8080
+kubectl port-forward deploy/BoundedContext473 8080:8080
 
 # another terminal
 http localhost:8080
@@ -55,7 +55,7 @@ http localhost:8080
 
 If you have any problem on running the pod, you can find the reason by hitting this:
 ```
-kubectl logs -l app=BoundedContext339
+kubectl logs -l app=BoundedContext473
 ```
 
 Following problems may be occurred:

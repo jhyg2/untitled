@@ -9,7 +9,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.transaction.support.TransactionSynchronizationAdapter;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.util.MimeTypeUtils;
-import untitled.BoundedContext339Application;
+import untitled.BoundedContext473Application;
 import untitled.config.kafka.KafkaProcessor;
 
 public class AbstractEvent {
@@ -31,7 +31,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = BoundedContext339Application.applicationContext.getBean(
+        KafkaProcessor processor = BoundedContext473Application.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

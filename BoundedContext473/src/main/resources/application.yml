@@ -25,7 +25,7 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: BoundedContext339
+          group: BoundedContext473
           destination: untitled
           contentType: application/json
         event-out:
@@ -60,7 +60,7 @@ spring:
                   serde: org.apache.kafka.common.serialization.Serdes$StringSerde
       bindings:
         event-in:
-          group: BoundedContext339
+          group: BoundedContext473
           destination: untitled
           contentType: application/json
         event-out:

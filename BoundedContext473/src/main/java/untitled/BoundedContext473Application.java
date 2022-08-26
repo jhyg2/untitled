@@ -10,12 +10,12 @@ import untitled.config.kafka.KafkaProcessor;
 @SpringBootApplication
 @EnableBinding(KafkaProcessor.class)
 @EnableFeignClients
-public class BoundedContext339Application {
+public class BoundedContext473Application {
 
     public static ApplicationContext applicationContext;
 
     public static void main(String[] args) {
         applicationContext =
-            SpringApplication.run(BoundedContext339Application.class, args);
+            SpringApplication.run(BoundedContext473Application.class, args);
     }
 }
